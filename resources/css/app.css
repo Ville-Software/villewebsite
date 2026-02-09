@@ -1,0 +1,287 @@
+@import "../mantine/core/styles/baseline.css";
+@import "../mantine/core/styles/default-css-variables.css";
+@import "../mantine/core/styles/global.css";
+@import "../mantine/core/styles/Container.css";
+@import "../mantine/core/styles/Group.css";
+@import "../mantine/core/styles/Image.css";
+@import "../mantine/core/styles/SimpleGrid.css";
+@import "../mantine/core/styles/Flex.css";
+@import "../mantine/core/styles/Text.css";
+
+@font-face {
+    font-family: 'Providence';
+    src: url('../font/Providence/Providence.woff2') format('woff2'),
+    url('../font/Providence/Providence.woff') format('woff'),
+    url('../font/Providence/Providence.svg#Providence') format('svg');;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+::view-transition-old(root),::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal
+}
+
+::view-transition-old(root) {
+    z-index: 1
+}
+
+::view-transition-new(root) {
+    z-index: 9999
+}
+
+::view-transition-old(root[data-mantine-color-scheme='dark']) {
+    z-index: 9999
+}
+
+::view-transition-new(root[data-mantine-color-scheme='dark']) {
+    z-index: 1
+}
+
+:root[data-mantine-color-scheme='dark'] {
+    --mantine-color-body: var(--mantine-color-black);
+}
+
+.villeui-contactus-image {
+    --image-radius: 0px;
+    width: calc(20.5rem * var(--mantine-scale));
+    filter: drop-shadow(6px 0px rgb(255, 46, 81));
+}
+
+:root[data-mantine-color-scheme='dark'] .villeui-contactus-image {
+    --image-radius: var(--mantine-radius-lg);
+    width: calc(20.5rem * var(--mantine-scale));
+    filter: drop-shadow(6px 6px rgb(255, 46, 81));
+}
+
+@media (max-width: 61.99375em) {
+    [data-mantine-color-scheme=light] .villeui-contactus-image {
+        filter: drop-shadow(0px 6px rgb(255, 46, 81));
+    }
+}
+
+.m_2075ec07 {
+    fill: var(--mantine-color-bright);
+}
+
+[data-mantine-color-scheme=dark] .m_2075ec07 {
+    color: var(--mantine-color-white)
+}
+
+.HeaderSimple_header__Tc_l4 {
+    margin-bottom: calc(7.5rem * var(--mantine-scale));
+    background-color: var(--mantine-color-body);
+    border-bottom: 1px solid var(--mantine-color-gray-3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: color-mix(in srgb, var(--mantine-color-body), transparent 15.000000000000002%);
+    backdrop-filter: blur(5px);
+}
+
+[data-mantine-color-scheme=dark] .HeaderSimple_header__Tc_l4 {
+    border-bottom: 1px solid var(--mantine-color-dark-7);
+    background-color: var(--mantine-color-dark-9);
+}
+
+.HeaderSimple_inner__eTI_c {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.HeaderSimple_link__Oh6lp {
+    display: block;
+    line-height: 1;
+    padding: calc(.5rem * var(--mantine-scale)) calc(.75rem * var(--mantine-scale));
+    border-radius: var(--mantine-radius-sm);
+    text-decoration: none;
+    color: var(--mantine-color-gray-9)
+}
+
+[data-mantine-color-scheme=dark] .HeaderSimple_link__Oh6lp {
+    color: var(--mantine-color-dark-0)
+}
+
+.HeaderSimple_link__Oh6lp {
+    font-size: var(--mantine-font-size-md);
+    font-weight: 600
+}
+
+@media (hover: hover) {
+    .HeaderSimple_link__Oh6lp:hover {
+        /*background-color:var(--mantine-color-pink-1)*/
+        text-decoration: underline;
+        text-decoration-thickness: 4px;
+        text-decoration-color: rgb(255, 46, 81);
+        text-decoration-style: solid;
+        text-underline-offset: calc(0.65rem * var(--mantine-scale));
+    }
+
+    [data-mantine-color-scheme=dark] .HeaderSimple_link__Oh6lp:hover {
+        /*background-color: var(--mantine-color-pink-6);*/
+        color: var(--mantine-color-white);
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+        text-decoration-color: rgb(255, 46, 81);
+        text-decoration-style: solid;
+        text-underline-offset: calc(0.55rem * var(--mantine-scale));
+    }
+}
+
+@media (hover: none) {
+    .HeaderSimple_link__Oh6lp:active {
+        background-color:var(--mantine-color-gray-0)
+    }
+
+    [data-mantine-color-scheme=dark] .HeaderSimple_link__Oh6lp:active {
+        background-color: var(--mantine-color-dark-6)
+    }
+}
+
+.HeaderSimple_link__Oh6lp[data-active] {
+    color: var(--mantine-color-black);
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-decoration-color: rgb(255, 46, 81);
+    text-decoration-style: solid;
+    text-underline-offset: calc(0.65rem * var(--mantine-scale));
+}
+
+[data-mantine-color-scheme=dark] .HeaderSimple_link__Oh6lp[data-active] {
+    color: var(--mantine-color-white);
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-decoration-color: rgb(255, 46, 81);
+    text-decoration-style: solid;
+    text-underline-offset: calc(0.65rem * var(--mantine-scale));
+}
+
+.HeaderSimple_link__Oh6lp[data-ville-contact] {
+    font-family: 'Providence';
+    color: var(--mantine-color-bright);
+    letter-spacing: 0.15rem;
+    text-shadow: 1px 1px rgb(255, 14, 54);
+}
+
+.HomePageTitle_title__Vmv_b {
+    font-family: var(--docs-font-primary);
+    font-weight: 450;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    color: var(--mantine-color-bright);
+    text-wrap: balance
+}
+
+.HomePageTitle_title__Vmv_b[data-order="1"] {
+    font-family: 'Providence';
+    font-weight: 500;
+    font-size: calc(5.5rem * var(--mantine-scale))
+}
+
+@media (max-width: 61.99375em) {
+    .HomePageTitle_title__Vmv_b[data-order="1"] {
+        font-size:calc(4.25rem * var(--mantine-scale))
+    }
+}
+
+.HomePageDescription_root__VdcJm {
+    max-width: calc(41.875rem * var(--mantine-scale));
+    font-size: calc(2rem * var(--mantine-scale));
+    color: var(--mantine-color-gray-9);
+    margin-top: var(--mantine-spacing-lg);
+    text-wrap: balance
+}
+
+[data-mantine-color-scheme=dark] .HomePageDescription_root__VdcJm {
+    color: var(--mantine-color-dark-1)
+}
+
+@media (max-width: 61.99375em) {
+    .HomePageDescription_root__VdcJm {
+        font-size:var(--mantine-font-size-lg)
+    }
+}
+
+.SubPageTitle_title__Vmv_b {
+    font-family: var(--docs-font-primary);
+    font-weight: 450;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    color: var(--mantine-color-bright);
+    text-wrap: balance
+}
+
+.SubPageTitle_title__Vmv_b[data-order="1"] {
+    font-family: 'Providence';
+    font-weight: 500;
+    font-size: calc(7.5rem * var(--mantine-scale));
+    letter-spacing: 0.25rem;
+}
+
+@media (max-width: 61.99375em) {
+    .SubPageTitle_title__Vmv_b[data-order="1"] {
+        font-size:calc(5.25rem * var(--mantine-scale));
+        letter-spacing: 0.15rem;
+    }
+}
+
+.SubPageTitle_title__ville_contact {
+    font-family: var(--docs-font-primary);
+    font-weight: 450;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    color: var(--mantine-color-bright);
+    text-wrap: balance
+}
+
+.SubPageTitle_title__ville_contact[data-order="1"] {
+    font-weight: 500;
+    font-size: calc(4.5rem * var(--mantine-scale));
+}
+
+@media (max-width: 61.99375em) {
+    .SubPageTitle_title__ville_contact[data-order="1"] {
+        font-size:calc(3.25rem * var(--mantine-scale));
+        letter-spacing: 0.15rem;
+    }
+}
+
+.SubPageTitle_Desc__ville_contact {
+    font-family: var(--docs-font-primary);
+    font-weight: 500;
+    font-size: calc(2rem * var(--mantine-scale));
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    color: var(--mantine-color-bright);
+    text-wrap: balance
+}
+
+.SubPageTitle_Desc__ville_contact[data-order="1"] {
+    font-weight: 500;
+    font-size: calc(4.5rem * var(--mantine-scale));
+}
+
+@media (max-width: 61.99375em) {
+    .SubPageTitle_Desc__ville_contact[data-order="1"] {
+        font-size:calc(3.25rem * var(--mantine-scale));
+        letter-spacing: 0.15rem;
+    }
+}
+
+
+
+
+
+
+
+
