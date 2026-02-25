@@ -14,7 +14,11 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
   <meta name="msapplication-tap-highlight" content="no"/>
 
+  <!-- Preload the font file -->
+  <link rel="preload" href="../resources/font/Providence.woff2" as="font" type="font/woff2" crossorigin>
+
   <link rel="preload" href="../resources/css/app.css" as="style">
+
   <link rel="stylesheet" href="../resources/css/app.css">
 
   <!-- Disable chrome translation requests and automatic phone number linking -->
@@ -54,7 +58,7 @@
             </div>
           </div>
         </header>
-        <div>
+        <div style="background-color: inherit;">
           <section class="HomePageJumbotron_root__972g2">
             <div class="HomePageJumbotron_container__GtsM_ m_7485cace mantine-Container-root" data-strategy="block">
               <div class="HomePageJumbotron_main__F3RRW">
